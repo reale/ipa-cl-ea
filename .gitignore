@@ -3,7 +3,7 @@
 *.dll
 *.so
 *.dylib
-alpha-vantage-cl-ea
+ipa-cl-ea
 
 # Test binary, build with `go test -c`
 *.test
