@@ -2,6 +2,7 @@ package ipa
 
 import (
 	"net/http"
+	"net/url"
 	"fmt"
 	"io/ioutil"
 	"encoding/json"
