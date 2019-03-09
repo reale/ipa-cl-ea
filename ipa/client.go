@@ -20,7 +20,8 @@ type Client struct {
 
 func NewClient(apiKey string) *Client {
 	c := &Client{}
-	c.BaseURL = "https://www.indicepa.gov.it"
+#	c.BaseURL = "https://www.indicepa.gov.it"
+	c.BaseURL = "http://localhost"
 	c.Endpoint = "/public-ws/WS01_SFE_CF.php"
 	c.APIKey = apiKey
 	return c
@@ -31,7 +32,7 @@ func (c *Client) Query(params map[string]interface{}) (map[string]*json.RawMessa
 	hc := &http.Client{}
 
 	payload := url.Values{
-		"AUTH_ID": {c.APIKey},
+		"AUTH_ID": c.APIKey,
 	}
 
 	resp, err := http.PostForm(fmt.Sprintf("%s%s", c.BaseURL, c.Endpoint), payload)
@@ -43,6 +44,7 @@ func (c *Client) Query(params map[string]interface{}) (map[string]*json.RawMessa
 #	req.URL.RawQuery = q.Encode()
 
 #	resp, err := hc.Do(req)
+
 	if err != nil {
 		return nil, err
 	}
