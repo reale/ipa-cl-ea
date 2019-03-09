@@ -34,7 +34,7 @@ func (c *Client) Query(params map[string]interface{}) (map[string]*json.RawMessa
 		return nil, err
 	}
 	q := req.URL.Query()
-	q.Add("apikey", c.APIKey)
+	q.Add("AUTH_ID", c.APIKey)
 	for k, v := range params {
 		q.Add(k, fmt.Sprint(v))
 	}
