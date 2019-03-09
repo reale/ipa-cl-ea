@@ -29,18 +29,20 @@ func NewClient(apiKey string) *Client {
 func (c *Client) Query(params map[string]interface{}) (map[string]*json.RawMessage, error) {
 	var om map[string]*json.RawMessage
 	hc := &http.Client{}
-	req, err := http.NewRequest("POST", fmt.Sprintf("%s%s", c.BaseURL, c.Endpoint), nil)
-	if err != nil {
-		return nil, err
-	}
-	q := req.URL.Query()
-	q.Add("AUTH_ID", c.APIKey)
-	for k, v := range params {
-		q.Add(k, fmt.Sprint(v))
-	}
-	req.URL.RawQuery = q.Encode()
 
-	resp, err := hc.Do(req)
+	payload := url.Values{
+		"AUTH_ID": {c.APIKey},
+	}
+
+	resp, err := http.PostForm(fmt.Sprintf("%s%s", c.BaseURL, c.Endpoint), payload)
+#	q := req.URL.Query()
+#	q.Add("AUTH_ID", c.APIKey)
+#	for k, v := range params {
+#		q.Add(k, fmt.Sprint(v))
+#	}
+#	req.URL.RawQuery = q.Encode()
+
+#	resp, err := hc.Do(req)
 	if err != nil {
 		return nil, err
 	}
