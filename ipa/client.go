@@ -30,7 +30,7 @@ func NewClient(apiKey string) *Client {
 
 func (c *Client) Query(params map[string]interface{}) (map[string]*json.RawMessage, error) {
 	var om map[string]*json.RawMessage
-	hc := &http.Client{}
+//	hc := &http.Client{}
 
 	payload := url.Values{
 		"AUTH_ID": {c.APIKey},
