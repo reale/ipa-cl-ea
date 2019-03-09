@@ -1,12 +1,12 @@
 # iPA External Adapter
 
-External Adapter for Chainlink to allow access to the Italian "Indice delle Pubbliche Amministrazioni".
+External Adapter for Chainlink to allow access to the Italian "Indice delle Pubbliche Amministrazioni" (iPA).
 
 Derived from [one](https://github.com/linkpoolio/alpha-vantage-cl-ea) of [LinkPool](https://linkpool.io/)'s adapters.
 
 ### Preconditions
 
-Retrieve an API key from Alpha Vantage for free:
+Retrieve an API key from the iPA website for free:
 
 https://www.indicepa.gov.it/documentale/n-webservices.php
 
