@@ -20,8 +20,8 @@ type Client struct {
 
 func NewClient(apiKey string) *Client {
 	c := &Client{}
-	c.BaseURL = "https://www.alphavantage.co"
-	c.Endpoint = "/query"
+	c.BaseURL = "https://www.indicepa.gov.it"
+	c.Endpoint = "/public-ws/WS01_SFE_CF.php"
 	c.APIKey = apiKey
 	return c
 }
