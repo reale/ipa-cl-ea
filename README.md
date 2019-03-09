@@ -1,5 +1,7 @@
 # iPA External Adapter
 
+![iPA logo](logo_ipa.png)
+
 External Adapter for Chainlink to allow access to the Italian "Indice delle Pubbliche Amministrazioni" (iPA).
 
 Derived from [one](https://github.com/linkpoolio/alpha-vantage-cl-ea) of [LinkPool](https://linkpool.io/)'s adapters.
