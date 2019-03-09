@@ -25,7 +25,7 @@ type RunResult struct {
 	Pending      bool        `json:"pending"`
 }
 
-var client *api.Client
+var client *ipa.Client
 
 func Api() *rest.Api{
 	api := rest.NewApi()
@@ -39,7 +39,7 @@ func Api() *rest.Api{
 	if Conf.APIKey == "" {
 		log.Fatal("no api key set")
 	}
-	client = api.NewClient(Conf.APIKey)
+	client = ipa.NewClient(Conf.APIKey)
 	api.SetApp(router)
 	log.Print("api started")
 	return api
