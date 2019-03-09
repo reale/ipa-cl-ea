@@ -29,7 +29,7 @@ func NewClient(apiKey string) *Client {
 func (c *Client) Query(params map[string]interface{}) (map[string]*json.RawMessage, error) {
 	var om map[string]*json.RawMessage
 	hc := &http.Client{}
-	req, err := http.NewRequest("GET", fmt.Sprintf("%s%s", c.BaseURL, c.Endpoint), nil)
+	req, err := http.NewRequest("POST", fmt.Sprintf("%s%s", c.BaseURL, c.Endpoint), nil)
 	if err != nil {
 		return nil, err
 	}
