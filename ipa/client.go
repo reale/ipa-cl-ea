@@ -33,7 +33,7 @@ func (c *Client) Query(params map[string]interface{}) (map[string]*json.RawMessa
 	hc := &http.Client{}
 
 	payload := url.Values{
-		"AUTH_ID": c.APIKey,
+		"AUTH_ID": {c.APIKey},
 	}
 
 	resp, err := http.PostForm(fmt.Sprintf("%s%s", c.BaseURL, c.Endpoint), payload)
