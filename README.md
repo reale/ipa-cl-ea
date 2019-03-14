@@ -33,11 +33,3 @@ Then run the adaptor:
 | ------ |:--------:| ----- |
 | p      | 8080     | Port number to serve |
 | apiKey | nil      | Your API Key for iPA |
-
-#### Docker
-To run the container:
-```
-docker run -it -p 8080:8080 robertoreale/ipa-cl-ea -apiKey=yourkey
-```
-
-Container also supports passing in CLI arguments.
