@@ -37,7 +37,7 @@ Then run the adaptor:
 #### Docker
 To run the container:
 ```
-docker run -it -p 8080:8080 reale/ipa-cl-ea -apiKey=yourkey
+docker run -it -p 8080:8080 robertoreale/ipa-cl-ea -apiKey=yourkey
 ```
 
 Container also supports passing in CLI arguments.
