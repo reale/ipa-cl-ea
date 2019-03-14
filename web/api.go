@@ -3,7 +3,8 @@ package web
 import (
 	"github.com/ant0ine/go-json-rest/rest"
 	log "github.com/sirupsen/logrus"
-	"github.com/reale/ipa-cl-ea/ipa"
+//	"github.com/reale/ipa-cl-ea/ipa"
+	"ipa-cl-ea/ipa"
 	"gopkg.in/guregu/null.v3"
 	"encoding/json"
 	"io/ioutil"

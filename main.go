@@ -4,7 +4,8 @@ import (
 	"fmt"
 	log "github.com/sirupsen/logrus"
 	"net/http"
-	"github.com/reale/ipa-cl-ea/web"
+//	"github.com/reale/ipa-cl-ea/web"
+	"ipa-cl-ea/web"
 )
 
 func main() {
