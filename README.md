@@ -38,9 +38,9 @@ Then run the adaptor:
 
 To call the API, you need to send a POST request to `http://localhost:<port>/query` with the request body being of the ChainLink `RunResult` type.
 
-The `data` passed in should match the parameter options from the iPA docs:
+The `data` passed in should match the parameter options from the iPA docs.
 
-For example:
+For example,
 ```
 curl -X POST -H 'Content-Type: application/json' -d '{ "jobRunId": "1234", "data": { "CF": "97735020584" }}' http://localhost:8080/query
 ```
